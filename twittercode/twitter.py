@@ -1,10 +1,10 @@
 import tweepy
 
 # Unique code from Twitter
-access_token = "YOUR CODE HERE"
-access_token_secret = "YOUR CODE HERE"
-consumer_key = "YOUR CODE HERE"
-consumer_secret = "YOUR CODE HERE"
+access_token = "212628107-fn045K7WGY3zVbS9sDpnOJWuBKOs1opFqisYVg8O"
+access_token_secret = "487ofYxbI0WodUgA2AZ2pGbxj8x8SXbYbvPNusF9nGMn6"
+consumer_key = "VYGAxy53VirDKL8SLEI9MDZYM"
+consumer_secret = "SjZghfbsOyAv3mcoccCvJ3URLCYcPy59FvtMWustiSeKVF5lrV"
 
 # Boilerplate code here
 auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
