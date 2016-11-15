@@ -14,7 +14,7 @@ import nltk # requires some downloading/installing dependencies to use all its f
 import random
 
 # import nltk
-nltk.download('punkt')
+#nltk.download('punkt')
 
 from nltk import word_tokenize,sent_tokenize
 
@@ -38,7 +38,7 @@ if debug:
 	for tup in tagged_tokens[:150]:
 		print (tup)
 x = []
-for each in tagged_tokens[:151]:
+for each in tagged_tokens[:150]:
 	x.append(each[0])
 print(" ".join(x))
 
@@ -53,13 +53,15 @@ def spaced(word):
 
 final_words = []
 
-
+add_count = 0
 for (word, tag) in tagged_tokens:
-	if tag not in substitution_probabilities or random.random() > substitution_probabilities[tag]:
-		final_words.append(spaced(word))
-	else:
-		new_word = input("Please enter %s:\n" % (tagmap[tag]))
-		final_words.append(spaced(new_word))
+	if add_count <= 150:
+		if tag not in substitution_probabilities or random.random() > substitution_probabilities[tag]:
+			final_words.append(spaced(word))
+		else:
+			new_word = input("Please enter %s:\n" % (tagmap[tag]))
+			final_words.append(spaced(new_word))
+			add_count += 1
 
 print ("".join(final_words))
 
